@@ -178,10 +178,13 @@
             const productsContainer = document.getElementById('products-container');
             const productCount = productsContainer.querySelectorAll('.product-item').length;
             const newProductItem = `
+            <p>Customer Phone Number</p>
         <div class="product-item mt-2">
             <div class="row">
+
                 <div class="row g-3">
                     <div class="col">
+                        <p>Customer Phone Number</p>
                         <select name="products[${productCount}][product_id]" class="form-control product-select">
                             <option value="" selected>Select product</option>
                             @foreach ($product as $p)
@@ -200,6 +203,7 @@
                     <div class="col">
                         <input type="text" name="products[${productCount}][totalPrice]" class="form-control total-price-input" min="1" placeholder="Total Price" readonly>
                     </div>
+                    
                 </div>
             </div>
         </div>

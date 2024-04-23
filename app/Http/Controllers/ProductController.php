@@ -59,6 +59,7 @@ class ProductController extends Controller
             'name' => 'required',
             'price' => 'required',
             'stock' => 'required',
+            'deskripsi' => 'required',
             'photo' => 'image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
 
@@ -79,6 +80,7 @@ class ProductController extends Controller
             'name' => $request->name,
             'price' => $request->price,
             'stock' => $request->stock,
+            'deskripsi' => $request->deskripsi,
             'photo' => $imgName,
         ]);
 

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->bigInteger('price');
             $table->bigInteger('stock');
+            $table->string('deskripsi');
             $table->string('photo');
             $table->timestamps();
         });

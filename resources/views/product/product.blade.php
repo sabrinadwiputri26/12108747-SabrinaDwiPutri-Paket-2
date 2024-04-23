@@ -19,7 +19,7 @@
                     
                         
                         <a href="" class="btn btn-primary mb-4" data-bs-toggle="modal"
-                            data-bs-target="#modalCreate">Create</a>
+                            data-bs-target="#modalCreate" style="margin-left:90%;">Create</a>
                         @if ($errors->any())
                             <div class="alert alert-danger">
                                 <ul>
@@ -36,7 +36,9 @@
                                     <th scope="col">Photo</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">Stock</th>
+                                    <th scope="col">Deskripsi</th>
                                     <th scope="col">Price</th>
+                            
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
@@ -52,6 +54,7 @@
                                         </td>
                                         <td>{{ $value->name }}</td>
                                         <td>{{ $value->stock }}</td>
+                                        <td>{{ $value->deskripsi }}</td>
                                         <td>{{ format_rupiah($value->price) }}</td>
                                         <td>
                                             <div class="d-flex justify-content-start">
@@ -121,6 +124,13 @@
                                                                     <input type="file" class="form-control"
                                                                         name="photo" id=""
                                                                         value="{{ $value->photo }}" aria-label="price">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row g-3">
+                                                                <div class="col">
+                                                                    <label class="col-md-12">Deskripsi</label>
+                                                                    <input type="text-area" class="form-control" id="rupiah2"
+                                                                        name="deskripsi" placeholder="masukan deskripsi" aria-label="deskripsi" style="">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -214,6 +224,13 @@
                                                     <label class="col-md-12">Upload Foto</label>
                                                     <input type="file" class="form-control" name="photo"
                                                         accept="image/*">
+                                                </div>
+                                            </div>
+                                            <div class="row g-3">
+                                                <div class="col">
+                                                    <label class="col-md-12">Deskripsi</label>
+                                                    <input type="text" class="form-control" id="rupiah2"
+                                                        name="deskripsi" placeholder="masukan deskripsi" aria-label="deskripsi">
                                                 </div>
                                             </div>
                                         </div>
